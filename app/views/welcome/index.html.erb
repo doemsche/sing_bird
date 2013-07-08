@@ -1,0 +1,9 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<%= link_to_if(user_signed_in?, "Logout", destroy_user_session_path, :method => :delete) %>
+
+<%= link_to_if(!user_signed_in?, "Login", user_session_path) %>
+<%= link_to_if(!user_signed_in?, "Login", user_session_path) %>
+<%= link_to_if(!user_signed_in?, "Sign Up", new_user_registration_path) %>

@@ -1,0 +1,7 @@
+<% @songs.each do |s| %>
+	Song Title:
+	<%= s.title %> 
+	<%= link_to 'show', songs_show_path(s) %>
+	<br/>
+
+<% end %>
