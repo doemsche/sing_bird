@@ -1,4 +1,5 @@
 class Chord < ActiveRecord::Base
-	has_and_belongs_to_many :songs
-	attr_accessible :name, :notes
+	has_many :chordifications
+	has_many :songs, :through => :chordifications
+	attr_accessible :name, :notes, :id
 end

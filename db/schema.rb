@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130709052800) do
+ActiveRecord::Schema.define(version: 20130709192704) do
+
+  create_table "chordifications", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "chord_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "chords", force: true do |t|
     t.string   "name"
@@ -20,9 +28,12 @@ ActiveRecord::Schema.define(version: 20130709052800) do
     t.datetime "updated_at"
   end
 
-  create_table "chords_songs", force: true do |t|
-    t.integer "song_id"
-    t.integer "chord_id"
+  create_table "chrodifications", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "chord_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rails_admin_histories", force: true do |t|

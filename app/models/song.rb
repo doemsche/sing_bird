@@ -1,4 +1,6 @@
 class Song < ActiveRecord::Base
 	belongs_to :user
-	has_and_belongs_to_many :chords
+	has_many :chordifications
+	has_many :chords, :through => :chordifications
+	attr_accessible :title, :lyrics, :user_id, :id
 end

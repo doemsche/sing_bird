@@ -12,4 +12,13 @@ class SongsController < ApplicationController
 
   def new
   end
+
+  def create
+    puts "########## done ##############"
+    @song = current_user.songs.build(params[:song])
+    if @song.save
+      flash[:success] = "Song created!"
+      redirect_to root_url
+    end
+  end
 end
