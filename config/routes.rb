@@ -1,4 +1,8 @@
 SingBird::Application.routes.draw do
+  get "chords/index"
+  get "chords/show"
+  get "chords/new"
+  get "chords/edit"
   get "songs/index"
   get "songs/show"
   get "songs/edit"

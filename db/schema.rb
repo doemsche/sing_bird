@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130708202119) do
+ActiveRecord::Schema.define(version: 20130709052800) do
+
+  create_table "chords", force: true do |t|
+    t.string   "name"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chords_songs", force: true do |t|
+    t.integer "song_id"
+    t.integer "chord_id"
+  end
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
